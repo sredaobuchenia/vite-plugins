@@ -1,5 +1,5 @@
 import type { PluginOption } from 'vite';
-import { colors } from 'utils';
+import { colors } from 'utils.ts';
 
 /**
  * Плагин для оповещения на запуске сервера
