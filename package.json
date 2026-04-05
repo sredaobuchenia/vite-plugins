@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/learnenv/viteplugins.git"
+    "url": "https://github.com/sredaobuchenia/vite-plugins.git"
   },
   "license": "ISC",
   "homepage": "https://gitlab.com/learnenv/viteplugins#readme",
