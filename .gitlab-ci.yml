@@ -1,0 +1,28 @@
+workflow:
+  rules:
+    - if: $CI_MERGE_REQUEST_ID
+      when: always
+    - when: never
+
+stages:
+  - install
+  - quality
+
+install:
+  image: node:16.17.0-alpine
+  stage: install
+  script:
+    - npm install
+  artifacts:
+    name: "artifacts"
+    untracked: true
+    expire_in: 30 mins
+    paths:
+      - .npm/
+      - node_modules/
+
+linting:
+  extends: install
+  stage: quality
+  script:
+    - npm run lint
